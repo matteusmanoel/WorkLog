@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Trello</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <header> 
+        <h1>WorkLog</h1>
+    </header>
+
+    <nav>
+        <button id="changeBackgroundBtn" type="button" onclick="changeBackground()">Change BackgrounD</button>
+    </nav>
+
+   
+    <div class="container">
+        <section class="columns">
+            <div class="column" id="toDo">
+                <h2>To Do</h2>
+                <form class="form">
+                    <input type="text" id="toDo-name" placeholder="Task" required>
+                    <textarea id="toDo-description" cols="35" rows="5" placeholder="Description"
+                        required></textarea>
+                    <button type="submit" class="addTask" onclick="addTask('toDo')">+</button>
+                </form>
+                <div class = "taskElement" id="toDo-taskContent">
+        <!-- tasks serão adicionadas aqui-->
+                </div>
+            </div>
+            <div class="column" id="inProgress">
+                <h2>In Progress</h2>
+                <form class="form">
+                    <input type="text" id="inProgress-name" placeholder="Task" required>
+                    <textarea id="inProgress-description" cols="35" rows="5" placeholder="Description"
+                        required></textarea>
+                    <button type="button" class="addTask" onclick="addTask('inProgress')">+</button>
+                </form>
+                <div class = "taskElement" id="inProgress-taskContent">
+        <!-- tasks serão adicionadas aqui-->
+                </div>
+
+            </div>
+            <div class="column" id="done">
+                <h2>Done</h2>
+                <form class="form">
+                    <input type="text" id="done-name" placeholder="Task" required>
+                    <textarea id="done-description" cols="35" rows="5" placeholder="Description"
+                        required></textarea>
+                    <button type="submit" onclick="addTask('done')">+</button>
+                </form>
+                <div class = "taskElement" class="addTask" id="done-taskContent">
+        <!-- tasks serão adicionadas aqui-->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/mainScript.js"></script>
+</body>
+</html>
